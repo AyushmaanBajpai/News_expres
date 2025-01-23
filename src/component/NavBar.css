@@ -1,0 +1,76 @@
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  color: white;
+}
+.navbar-nav .nav-item {
+  margin-left: 10px; 
+}
+
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: calc(100% + 10px); 
+}
+.navbar-nav .nav-link {
+  padding: 10px 15px; /* Add padding around the nav links */
+}
+
+/* Add this to your NavBar.css file */
+@import url('https://fonts.googleapis.com/css2?family=Stream+BC&display=swap');
+
+.navbar-brand {
+  font-family: 'Stream BC', sans-serif;
+}
+
+
+.weather-widget {
+  display: flex;
+  align-items: center;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-city {
+  font-size: 0.8em;
+  margin-bottom: 2px;
+  color: white;
+}
+
+.weather-temp {
+  display: flex;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.weather-temp span {
+  margin-left: 5px;
+  font-size: 1em;
+  color: white;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* or any other background color */
+}
